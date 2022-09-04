@@ -1,11 +1,10 @@
 pipeline{
-    agent{
-        agent any
-        tools {
-            maven 'maven3'
-            jdk 'jdk1.8'
+    agent any
+
+    tools {
+        maven 'maven3'
+        jdk 'jdk1.8'
         }
-    }
 
     environment {
         SNAP_REPO = 'poc1-snapshot'
