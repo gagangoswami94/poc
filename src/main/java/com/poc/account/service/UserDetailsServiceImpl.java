@@ -1,8 +1,8 @@
-package com.visualpathit.account.service;
+package com.poc.account.service;
 
-import com.visualpathit.account.model.Role;
-import com.visualpathit.account.model.User;
-import com.visualpathit.account.repository.UserRepository;
+import com.poc.account.model.Role;
+import com.poc.account.model.User;
+import com.poc.account.repository.UserRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;

@@ -1,4 +1,4 @@
-package com.visualpathit.account.model;
+package com.poc.account.model;
 
 import javax.persistence.*;
 import java.util.Set;
