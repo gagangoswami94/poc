@@ -37,13 +37,13 @@ pipeline{
                 sh "mvn -s settings.xml test"
             }
         }
-/* 
+
         stage("Checkstyle Analysis"){
             steps{
                 sh "mvn -s settings.xml checkstyle:checkstyle"
             }
         }
-*/        
+        
         stage("Sonar Analysis"){
             environment {
                 scannerHome = tool 'sonarscanner4'
@@ -63,5 +63,14 @@ pipeline{
             }
 
         }
+        stage("Quality Gate") {
+            steps {
+                timeout(time: 1, unit: 'HOURS') {
+                    // It indicates whether to set pipeline to UNSTABLE if Quality Gate fails
+                    // true = set pipeline to UNSTABLE, false = don't
+                    waitForQualityGate abortPipeline: true
+                }
+            }
+        }        
     }
 }
