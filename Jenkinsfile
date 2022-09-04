@@ -7,15 +7,15 @@ pipeline{
         }
 
     environment {
-        SNAP_REPO = 'poc1-snapshot'
-        NEXUS_USER = 'admin'
-        NEXUS_PASS = 'admin'
-        RELEASE_REPO = 'poc1-maven-release'
-        CENTRAL_REPO = 'poc1-maven-central'
-        NEXUS_IP = "172.31.83.222"
-        NEXUS_PORT = "8081"
-	    NEXUS_GRP_REPO = "poc1-group"
-        NEXUS_LOGIN = 'nexus'       
+        SNAP-REPO = 'poc1-snapshot'
+        NEXUS-USER = 'admin'
+        NEXUS-PASS = 'admin'
+        RELEASE-REPO = 'poc1-maven-release'
+        CENTRAL-REPO = 'poc1-maven-central'
+        NEXUSIP = "172.31.83.222"
+        NEXUSPORT = "8081"
+	    NEXUS-GRP-REPO = "poc1-group"
+        NEXUS-LOGIN = 'nexus'       
     }
     stages{
         stage("Build"){
